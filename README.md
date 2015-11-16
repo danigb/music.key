@@ -12,8 +12,8 @@
 
 ```js
 var key = require('music.key')
-key('c# g# f#') // => ['major', 'A']
-key.minor('A major') // => ['minor', 'F']
+key.fromNotes('c# g# d f#') // => 'A major'
+key.minor('A major') // => 'F minor'
 key.scale('A major') // => ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#']
 key.chords('A major') // => ['A', 'Bm', 'C#m', 'D', 'E7', 'F#m', 'G#o']
 ```
