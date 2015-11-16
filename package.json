@@ -1,0 +1,43 @@
+{
+  "name": "music.key",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "Your javascript music key",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows test/*.test.js",
+    "docs": "documentation -f md > API.md",
+    "dist": "browserify index.js | uglifyjs > dist/music.key.min.js && ls -all dist/",
+    "disc": "browserify --full-paths index.js | uglifyjs | discify > docs/disc.html",
+    "build": "npm run docs && npm run dist && npm run coverage && npm run disc",
+    "coverage": "istanbul cover vows test/**/*.test.js",
+    "cover": "npm run coverage && open ./coverage/lcov-report/index.html",
+    "benchmarks": "node test/benchmarks/*.js",
+    "climate": "npm run coverage && npm run codeclimate",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/music.key.git"
+  },
+  "keywords": [
+    "music",
+    "key",
+    "harmony",
+    "scale",
+    "chord",
+    "music.kit"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/music.key/issues"
+  },
+  "homepage": "https://github.com/danigb/music.key#readme",
+  "dependencies": {
+    "music.kit": "0.0.x"
+  },
+  "devDependencies": {
+    "vows": "^0.8.x"
+  }
+}
