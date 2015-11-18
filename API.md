@@ -87,3 +87,24 @@ Returns `Array` an array with the altered notes ordered or an empty array
 if its not a valid key name
 
 
+## `key.signature`
+
+Get relative of a key
+
+### Parameters
+
+* `relative` **`String`** the relative name
+* `key` **`String`** the key name
+
+
+### Examples
+
+```js
+key.relative('minor', 'C major') // =>
+key.relative('F major') // =>
+key.relative('A major') // =>
+```
+
+Returns `String` the relative key name or null if the key or the relative name is note valid
+
+

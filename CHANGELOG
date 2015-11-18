@@ -1,5 +1,7 @@
 CHANGELOG
 
+[0.0.6] key.relative function (13kb / 10.3kb)
+[0.0.5] key.progression with proper roman numerals
 [0.0.4] Rename key.altered to key.signature
 [0.0.3] key.progression (12kb / 9kb)
 [0.0.2] Remove key.modes
@@ -8,4 +10,3 @@ CHANGELOG
 TODO
 - key.relative
 - key.fromNotes
-- roman numerals with alterations

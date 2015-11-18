@@ -8,6 +8,14 @@ vows.describe('key.progression').addBatch({
       [ 'Dm', 'G7', 'CM' ])
     assert.deepEqual(key.progression('ii V I', 'Bb major'),
       [ 'Cm', 'F7', 'BbM' ])
+    assert.deepEqual(key.progression('i ii biii', 'Bb major'),
+      [ 'BbM', 'Cm', null ])
+  },
+  'progression of minor': function () {
+    assert.deepEqual(key.progression('II V I', 'C minor'),
+      [ 'Ddim', 'Gm', 'Cm' ])
+    assert.deepEqual(key.progression('I II bIII III IV', 'D minor'),
+      ['Dm', 'Edim', 'FM', null, 'Gm'])
   },
   'upper or lower case is irrelevant': function () {
     assert.deepEqual(key.progression('II V I', 'C major'), key.progression('ii v i', 'C major'))
