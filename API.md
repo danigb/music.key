@@ -73,6 +73,3 @@ Returns `Array` an array with the key chords
 ```js
 key.scale('C major') // => ['C', 'D', 'E', ...]
 ```
-
-
-

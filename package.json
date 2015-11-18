@@ -1,13 +1,13 @@
 {
   "name": "music.key",
   "private": "true",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Your javascript music key",
   "main": "lib/index.js",
   "scripts": {
     "test": "vows test/*.test.js",
     "docs": "documentation -f md > API.md",
-    "dist": "browserify lib/index.js | uglifyjs > dist/music.key.min.js && ls -all dist/",
+    "dist": "browserify lib/index.js | uglifyjs > dist/music.key.min.js && ls -hall dist/",
     "disc": "browserify --full-paths lib/index.js | uglifyjs | discify > docs/disc.html",
     "build": "npm run docs && npm run dist && npm run coverage && npm run disc",
     "coverage": "istanbul cover vows test/*.test.js",
