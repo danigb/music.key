@@ -1,5 +1,6 @@
 CHANGELOG
 
+[0.0.4] Rename key.altered to key.signature
 [0.0.3] key.progression (12kb / 9kb)
 [0.0.2] Remove key.modes
 [0.0.1] First version (12kb / 9kb)

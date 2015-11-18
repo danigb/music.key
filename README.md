@@ -26,7 +26,8 @@ Not yet released.
 
 ## Documentation
 
-[Generated documentation here](https://github.com/danigb/music.key/blob/master/API.md)
+Read the [user guide](https://github.com/danigb/music.key/blob/master/GUIDE.md)
+or the generated [API documentation](https://github.com/danigb/music.key/blob/master/API.md)
 
 ## License
 

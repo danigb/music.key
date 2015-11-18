@@ -1,24 +1,3 @@
-## `key.altered`
-
-Get altered notes of a key
-
-### Parameters
-
-* `name` **`String`** the key name
-
-
-### Examples
-
-```js
-key.altered('F major') // => ['Bb']
-key.altered('Eb major') // => ['Bb', 'Eb', 'Ab']
-key.altered('A major') // => ['F#', 'C#', 'G#']
-```
-
-Returns `Array` an array with al the altered notes ordered or an empty array
-if its not a valid key name
-
-
 ## `key.build`
 
 Build a key from key name
@@ -85,5 +64,26 @@ Get a chord progression from within a key
 key.scale('C major') // => ['C', 'D', 'E', ...]
 ```
 
+
+
+## `key.signature`
+
+Get signature of a key: a list of altered notes in the appropriate order
+
+### Parameters
+
+* `name` **`String`** the key name
+
+
+### Examples
+
+```js
+key.signature('F major') // => ['Bb']
+key.signature('Eb major') // => ['Bb', 'Eb', 'Ab']
+key.signature('A major') // => ['F#', 'C#', 'G#']
+```
+
+Returns `Array` an array with the altered notes ordered or an empty array
+if its not a valid key name
 
 
