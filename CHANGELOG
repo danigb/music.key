@@ -1,5 +1,10 @@
 CHANGELOG
 
-[0.0.3] key.progression
+[0.0.3] key.progression (12kb / 9kb)
 [0.0.2] Remove key.modes
 [0.0.1] First version (12kb / 9kb)
+
+TODO
+- key.relative
+- key.fromNotes
+- roman numerals with alterations

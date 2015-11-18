@@ -45,6 +45,8 @@ key.chords('C major') // => ['CM', 'Dm', 'Em', 'FM', 'G7', 'Am', 'Bdim']
 
 #### Progressions
 
+This function is not complete. Now you can do this:
+
 ```js
 key.progression('II V I', 'C major') // => ['Dm', 'G7', 'CM']
 ```

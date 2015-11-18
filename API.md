@@ -1,24 +1,22 @@
-## `exports`
+## `key.altered`
 
-Get all modes of a key
+Get altered notes of a key
 
+### Parameters
 
-
-
-
-
-## `exports`
-
-
-
+* `name` **`String`** the key name
 
 
 ### Examples
 
 ```js
 key.altered('F major') // => ['Bb']
+key.altered('Eb major') // => ['Bb', 'Eb', 'Ab']
+key.altered('A major') // => ['F#', 'C#', 'G#']
 ```
 
+Returns `Array` an array with al the altered notes ordered or an empty array
+if its not a valid key name
 
 
 ## `key.build`
@@ -62,6 +60,19 @@ key.chords('major', false) // => ['C', 'Dm', ...]
 Returns `Array` an array with the key chords
 
 
+## `key.progression`
+
+Get a chord progression from within a key
+
+### Parameters
+
+* `numerals` **`String or Array`** the roman numerals
+* `key` **`String`** the key name
+
+
+
+
+
 ## `key.scale`
 
 
@@ -73,3 +84,6 @@ Returns `Array` an array with the key chords
 ```js
 key.scale('C major') // => ['C', 'D', 'E', ...]
 ```
+
+
+
