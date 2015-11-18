@@ -2,7 +2,7 @@
   "name": "music.key",
   "private": "true",
   "version": "0.0.1",
-  "description": "Your javascript music key",
+  "description": "Music key",
   "main": "lib/index.js",
   "scripts": {
     "test": "vows test/*.test.js",
