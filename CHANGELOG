@@ -1,5 +1,8 @@
 CHANGELOG
 
+[0.0.9] alterations and signature
+[0.0.8] key function
+[0.0.7] Better parser (14kb / 10.6kb)
 [0.0.6] key.relative function (13kb / 10.3kb)
 [0.0.5] key.progression with proper roman numerals
 [0.0.4] Rename key.altered to key.signature
@@ -8,5 +11,4 @@ CHANGELOG
 [0.0.1] First version (12kb / 9kb)
 
 TODO
-- key.relative
-- key.fromNotes
+- key.detect (aka fromNotes)

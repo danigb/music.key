@@ -1,11 +1,11 @@
 {
   "name": "music.key",
   "private": "true",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Music key",
   "main": "lib/index.js",
   "scripts": {
-    "test": "vows test/*.test.js",
+    "test": "vows test/*.js",
     "docs": "documentation -f md > API.md",
     "dist": "browserify lib/index.js | uglifyjs > dist/music.key.min.js && ls -hall dist/",
     "disc": "browserify --full-paths lib/index.js | uglifyjs | discify > docs/disc.html",

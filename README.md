@@ -30,7 +30,9 @@ Not yet released.
 
 A key in `music.key` is a string with a tonic and (optionally) a mode: `'C'`, `'C major'`,`'C minor'`,`'Ab dorian'` are valid keys. The recognized modes are: major, minor, dorian, phrygian, lydian, mixolydian, aeolian and locrian.
 
-The key function parses the key and returns an array with the tonic and mode:
+#### Create keys
+
+The key function returns a key from a name or from a signature:
 
 ```js
 key('C major') // => ['C', 'major']
@@ -53,14 +55,17 @@ var minor = key.relative('minor')
 minor('C major') // => 'A minor'
 ```
 
-#### Get key signature
+#### Get key signature and altered notes
 
 The key signature is the altered notes of the key in the appropriate order:
 
 ```js
-key.signature('F major') // => ['Bb']
-key.signature('Eb major') // => ['Bb', 'Eb', 'Ab']
-key.signature('A major') // => ['F#', 'C#', 'G#']
+key.signature('F major') // => 'b'
+key.altNotes('F major') // => ['Bb']
+key.altNotes('Eb major') // => ['Bb', 'Eb', 'Ab']
+key.signature('Eb major') // => 'bbb'
+key.altNotes('A major') // => ['F#', 'C#', 'G#']
+key.signature('A major') // => '###'
 ```
 
 ### Get key scale and chords

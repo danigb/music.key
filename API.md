@@ -68,27 +68,6 @@ key.scale('C major') // => ['C', 'D', 'E', ...]
 
 ## `key.signature`
 
-Get signature of a key: a list of altered notes in the appropriate order
-
-### Parameters
-
-* `name` **`String`** the key name
-
-
-### Examples
-
-```js
-key.signature('F major') // => ['Bb']
-key.signature('Eb major') // => ['Bb', 'Eb', 'Ab']
-key.signature('A major') // => ['F#', 'C#', 'G#']
-```
-
-Returns `Array` an array with the altered notes ordered or an empty array
-if its not a valid key name
-
-
-## `key.signature`
-
 Get relative of a key
 
 ### Parameters
@@ -106,5 +85,26 @@ key.relative('A major') // =>
 ```
 
 Returns `String` the relative key name or null if the key or the relative name is note valid
+
+
+## `key.signature`
+
+Get signature of a key: a list of altered notes in the appropriate order
+
+### Parameters
+
+* `name` **`String`** the key name
+
+
+### Examples
+
+```js
+key.signature('F major') // => ['Bb']
+key.signature('Eb major') // => ['Bb', 'Eb', 'Ab']
+key.signature('A major') // => ['F#', 'C#', 'G#']
+```
+
+Returns `Array` an array with the altered notes ordered or an empty array
+if its not a valid key name
 
 
