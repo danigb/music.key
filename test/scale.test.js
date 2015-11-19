@@ -19,5 +19,8 @@ vows.describe('key.scale').addBatch({
   'no tonic': function () {
     assert.deepEqual(key.scale('major'), ['1P', '2M', '3M', '4', '5', '6M', '7M'])
     assert.deepEqual(key.scale('locrian'), ['1P', '2m', '3m', '4', '5b', '6m', '7m'])
+  },
+  'invalid': function () {
+    assert.deepEqual(key.scale('blah'), [])
   }
 }).export(module)

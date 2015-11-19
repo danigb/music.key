@@ -7,5 +7,9 @@ vows.describe('key.signature').addBatch({
     assert.deepEqual(key.signature('F major'), 'b')
     assert.deepEqual(key.signature('A major'), '###')
     assert.deepEqual(key.signature('Eb major'), 'bbb')
+  },
+  'invalid': function () {
+    assert.equal(key.signature('c Blah'), null)
+    assert.equal(key.signature('minor'), null)
   }
 }).export(module)

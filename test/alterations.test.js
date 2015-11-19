@@ -11,5 +11,10 @@ vows.describe('key.alterations').addBatch({
   },
   'modes': function () {
     assert.deepEqual(key.alterations('A minor'), 0)
+    assert.deepEqual(key.alterations('C dorian'), -2)
+  },
+  'invalid': function () {
+    assert.equal(key.alterations('minor'), null)
+    assert.equal(key.alterations('C blah'), null)
   }
 }).export(module)

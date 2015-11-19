@@ -17,6 +17,10 @@ vows.describe('key.progression').addBatch({
     assert.deepEqual(key.progression('I II bIII III IV', 'D minor'),
       ['Dm', 'Edim', 'FM', null, 'Gm'])
   },
+  'use bars as separators': function () {
+    assert.deepEqual(key.progression('II V | I', 'Ab major'),
+      ['Bbm', 'Eb7', 'AbM'])
+  },
   'upper or lower case is irrelevant': function () {
     assert.deepEqual(key.progression('II V I', 'C major'), key.progression('ii v i', 'C major'))
   }

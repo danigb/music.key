@@ -14,7 +14,7 @@
     "cover": "npm run coverage && open ./coverage/lcov-report/index.html",
     "benchmarks": "node test/benchmarks/*.js",
     "climate": "npm run coverage && npm run codeclimate",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate-test-reporter < coverage/lcov.info"
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=6151e185355d97b13281da4b7aad50a20b070d5e8a40c013500e44b4547f7716 codeclimate-test-reporter < coverage/lcov.info"
   },
   "repository": {
     "type": "git",

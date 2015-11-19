@@ -8,5 +8,9 @@ vows.describe('key.altNotes').addBatch({
     assert.deepEqual(key.altNotes('F major'), ['Bb'])
     assert.deepEqual(key.altNotes('A major'), ['F#', 'C#', 'G#'])
     assert.deepEqual(key.altNotes('Eb major'), ['Bb', 'Eb', 'Ab'])
+  },
+  'invalid': function () {
+    assert.deepEqual(key.altNotes('major'), null)
+    assert.deepEqual(key.altNotes('C blah'), null)
   }
 }).export(module)

@@ -22,5 +22,6 @@ vows.describe('key.build').addBatch({
     assert.deepEqual(parse('blah major'), null)
     assert.deepEqual(parse('blah'), null)
     assert.deepEqual(parse('C bebop'), null)
+    assert.deepEqual(parse(), null)
   }
 }).export(module)
