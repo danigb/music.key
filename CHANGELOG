@@ -1,5 +1,8 @@
 CHANGELOG
 
+
+[0.0.11] Less data (15kb / 11.7kb)
+[0.0.10] Better parser (15kb / 11.6kb)
 [0.0.9] alterations and signature
 [0.0.8] key function
 [0.0.7] Better parser (14kb / 10.6kb)

@@ -1,3 +1,41 @@
+## `key`
+
+Create a key from a string. A key is a string with a tonic and a mode
+
+
+
+### Examples
+
+```js
+key('C major') // => 'C major'
+key('c Major') // => 'C major'
+key('C') // => 'C major'
+key('dbb miXolydian') // => 'Dbb mixolydian'
+```
+
+
+
+## `key.altNotes`
+
+Get a list of altered notes in the appropriate order
+
+### Parameters
+
+* `name` **`String`** the key name
+
+
+### Examples
+
+```js
+key.altNotes('F major') // => ['Bb']
+key.altNotes('Eb major') // => ['Bb', 'Eb', 'Ab']
+key.altNotes('A major') // => ['F#', 'C#', 'G#']
+```
+
+Returns `Array` an array with the altered notes ordered or an empty array
+if its not a valid key name
+
+
 ## `key.build`
 
 Build a key from key name
@@ -52,6 +90,28 @@ Get a chord progression from within a key
 
 
 
+## `key.relative`
+
+Get relative of a key
+
+### Parameters
+
+* `relative` **`String`** the name of the relative mode desired
+* `key` **`String`** the key name
+
+
+### Examples
+
+```js
+key.relative('minor', 'C major') // => 'A minor'
+key.relative('major', 'A minor') // => 'C major'
+key.relative('dorian', 'F major') // => 'G dorian'
+```
+
+Returns `String` the relative key name or null if the key or the relative name
+are not valid
+
+
 ## `key.scale`
 
 
@@ -68,28 +128,7 @@ key.scale('C major') // => ['C', 'D', 'E', ...]
 
 ## `key.signature`
 
-Get relative of a key
-
-### Parameters
-
-* `relative` **`String`** the relative name
-* `key` **`String`** the key name
-
-
-### Examples
-
-```js
-key.relative('minor', 'C major') // =>
-key.relative('F major') // =>
-key.relative('A major') // =>
-```
-
-Returns `String` the relative key name or null if the key or the relative name is note valid
-
-
-## `key.signature`
-
-Get signature of a key: a list of altered notes in the appropriate order
+Get the number of alterations of a key
 
 ### Parameters
 
@@ -99,12 +138,35 @@ Get signature of a key: a list of altered notes in the appropriate order
 ### Examples
 
 ```js
-key.signature('F major') // => ['Bb']
-key.signature('Eb major') // => ['Bb', 'Eb', 'Ab']
-key.signature('A major') // => ['F#', 'C#', 'G#']
+key.signature('C major') // => 0
+key.signature('F major') // => -1
+key.signature('Eb major') // => -3
+key.signature('A major') // => 3
+key.signature('nonsense') // => null
 ```
 
-Returns `Array` an array with the altered notes ordered or an empty array
-if its not a valid key name
+Returns `Integer` the number of alterations or null if not valid key
+
+
+## `key.signature`
+
+Get signature of a key
+
+### Parameters
+
+* `name` **`String`** the key name
+
+
+### Examples
+
+```js
+key.signature('F major') // => 'b'
+key.signature('Eb major') // => 'bbb'
+key.signature('A major') // => '###'
+key.signature('C major') // => ''
+key.signature('nonsense') // => null
+```
+
+Returns `String` a string with the alterations
 
 

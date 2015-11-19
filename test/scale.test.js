@@ -15,5 +15,9 @@ vows.describe('key.scale').addBatch({
     assert.deepEqual(key.scale('D phrygian'), ['D', 'Eb', 'F', 'G', 'A', 'Bb', 'C'])
     assert.deepEqual(key.scale('D aeolian'), ['D', 'E', 'F', 'G', 'A', 'Bb', 'C'])
     assert.deepEqual(key.scale('D locrian'), ['D', 'Eb', 'F', 'G', 'Ab', 'Bb', 'C'])
+  },
+  'no tonic': function () {
+    assert.deepEqual(key.scale('major'), ['1P', '2M', '3M', '4', '5', '6M', '7M'])
+    assert.deepEqual(key.scale('locrian'), ['1P', '2m', '3m', '4', '5b', '6m', '7m'])
   }
 }).export(module)
